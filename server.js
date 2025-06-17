@@ -12,9 +12,17 @@ console.log(global);
 // 5) CommonJS modules instead of ES6 modules
 
 const os = require("os");
+const path = require("path");
+
 console.log("Type: " + os.type);
 console.log("Version: " + os.version);
 console.log("Home Dir: " + os.homedir);
 
 console.log(__dirname);
 console.log(__filename);
+
+console.log(path.dirname(__filename));
+console.log(path.basename(__filename));
+console.log(path.extname(__filename));
+
+console.log(path.parse(__filename));
